@@ -25,4 +25,5 @@ if __name__ == "__main__":
         print(results[i], end='\n\n')
 
     print('Recycled results:')
+
     print(pd.concat(results).groupby('category')['median'].aggregate([('median median', 'median'),('median std', 'std')]).reset_index())
